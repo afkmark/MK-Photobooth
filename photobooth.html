@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instax Photobooth</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Mk Photobooth</h1>
+
+      <div class="video-container">
+        <video id="video" autoplay></video>
+      </div>
+
+      <div class="controls">
+        <label
+          >Filter:
+          <select id="filter">
+            <option value="none">None</option>
+            <option value="grayscale(100%)">Grayscale</option>
+            <option value="polaroid">Polaroid</option>
+          </select>
+        </label>
+
+        <label
+          >Mode:
+          <select id="photoMode">
+            <option value="single">Single Photo</option>
+            <option value="strip">1x4 Strip</option>
+          </select>
+        </label>
+
+        <input type="text" id="caption" placeholder="Enter caption..." />
+        <button id="cameraToggle">Turn On Camera</button>
+        <button id="capture">Capture</button>
+        <button id="reset">Reset</button>
+      </div>
+
+      <canvas id="canvas" style="display: none"></canvas>
+
+      <div id="gallery" class="photo-gallery"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
